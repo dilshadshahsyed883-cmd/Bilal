@@ -1,23 +1,19 @@
 # Bilal — Procurement & Sourcing AI (Android)
 
-Bilal's independent Pakistan Government Procurement & Sourcing AI project. Target: a bilingual Android app to turn tender/BOQ documents into structured, editable, supplier-search-ready records; discover legitimate Pakistan B2B suppliers; and compose owner-reviewed RFQs and quote comparisons.
+**Owner / maker: Bilal.** GitHub-first project source and releases: [ProcureMate Pakistan v0.1.1-beta](https://github.com/dilshadshahsyed883-cmd/Bilal/releases/tag/v0.1.1-beta).
 
-**Owner/maker:** Bilal (display requirement; not yet verified in a running APK).  
-**Testing baseline:** MVP v1.1 (provisional).  
-**Status on 21 Oct 2026:** Specification and test scenarios documented; Android source and verified built APK are not yet present here.
+## App
+- [Android source code](apps/procuremate-android/)
+- [Download current test APK from Releases](https://github.com/dilshadshahsyed883-cmd/Bilal/releases/tag/v0.1.1-beta)
+- [Android build and release automation](.github/workflows/procuremate-android-release.yml)
 
-## Project records
-- [Detailed product requirements: MVP v1.1](docs/MVP_SPEC_V1_1.md)
-- [20–21 Oct night work, decisions and outstanding issues](docs/NIGHT_SESSION_2026-10-20_21.md)
+The app includes OCR-driven image/scanned-PDF item extraction with table geometry, editable BOQ records, source page/row, low-confidence review, Pakistan supplier web-lead search (not verified businesses), RFQ drafts, CSV export and **Made by Bilal** branding. CI runs parser tests, builds and verifies the APK, and publishes the downloadable test package to GitHub Releases.
+
+**Important:** v0.1.1-beta is an early working app and does not implement the entire MVP v1.1 scope. On-device testing and the nine-screenshot regression corpus remain open. The APK is debug-signed, not a Play Store release.
+
+## Reference
+- [MVP specification v1.1](docs/MVP_SPEC_V1_1.md)
+- [Night session and issue history](docs/NIGHT_SESSION_2026-10-20_21.md)
 - [Bilal Master Google Doc](https://docs.google.com/document/d/1Q5geNcCefCE4QBScqt6g11bCuwAB_wGPjP84gny1VR8/edit)
 
-## Requirements at a glance
-- Tender PDF, screenshot, photo, CSV and Excel input; duplicate screenshot detection; independent lots; multi-page table reconstruction; editable BOQ lines and units.
-- Preserve source page, quantities and units, brands/equivalents, uncertainty and document-specific GST/other conditions.
-- Search real suppliers starting with Lahore, Faisalabad and Gujranwala; widen to Pakistan when needed; no fictitious business contacts or quotations.
-- Bilingual human-approved RFQ drafts, actual landed-cost comparison and exports.
-- Seven priority categories plus home and hospital textile specializations and dynamic mixed-category items.
-- Private team workspace target (2–5 users); no unauthorized auto-messaging or government bid submission.
-
-## Build proof still needed
-Android source, CI analysis/tests, reproducible APK build and installation/smoke-test evidence are required before claiming the APK is delivered. VPS_1 and Haseeb projects remain separate. Because this GitHub repo is public, keep private tenders, contacts, API credentials and signing keys out of commits.
+Do not commit private tender screenshots, supplier personal data, API keys, or signing credentials. Keep Bilal application work separate from VPS_1 and Haseeb.
